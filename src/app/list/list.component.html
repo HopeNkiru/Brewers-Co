@@ -1,0 +1,18 @@
+<h1>Breweries</h1>
+
+<table *ngIf="brews">
+  <tr *ngFor="let brew of brews">
+      <td>{{ brew.id }}</td>
+      <td class="name">{{  brew.name }}</td>
+      <td class="country">{{ brew.country }}</td>
+      <td><a href="{{ brew?.website_url }}" class="site"> site</a></td>
+  </tr>
+</table>
+
+<ul *ngIf="brews">
+  <li *ngFor="let brew of brews">
+      <p class="name">{{  brew.name }}</p>
+      <p class="country">{{ brew.country }}</p>
+      <p><a href="{{ brew?.website_url }}" class="site"> site</a></p>
+  </li>
+</ul>
